@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Maps with flex style</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="card" style="background-image: url(images/rio.jpg)">Rio</div>
+    <div class="card" style="background-image: url(images/berlin.jpg)">Berlin</div>
+    <div class="card" style="background-image: url(images/shanghai.jpg)">Shanghai</div>
+    <div class="card" style="background-image: url(images/barcelona.jpg)">Barcelona</div>
+
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById("map"), {
+                center: {lat: 31.770, lng: 35.220},
+                zoom: 8,
+                scrollwheel: false
+            });
+            var marker = new google.maps.Marker({position: {lat: 31.770, lng: 35.220}, map: map});
+        }
+        
+    </script>
+    <!-- Need to get key from google -->
+    <!-- https://console.developers.google.com/cloud-resource-manager?pli=1 -->
+    <!-- AIzaSyBtqUCpZM3ArEoT_AEFzIyLiKxc6uWq900  -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtqUCpZM3ArEoT_AEFzIyLiKxc6uWq900&callback=initMap"></script>    
+</body>
+
+</html>

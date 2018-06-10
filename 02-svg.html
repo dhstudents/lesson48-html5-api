@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- https://html5demos.com/svg-clock/ -->
+
+<head>
+    <title>SVG</title>
+    <meta charset="utf-8" /> </head>
+<style>
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+    }
+
+    div,
+    h1 {
+        border: 2px solid rgba(23, 100, 20, 0.5);
+        border-radius: 25px;
+        display: table-cell;
+        vertical-align: center;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        /* align-content: center; */
+    }
+
+    /* div > svg,h1 {
+        justify-self: center;
+    } */
+</style>
+
+<body>
+    <h1 style="grid-column: 1 / -1; text-align: canter;">SVG Examples</h1>
+    <div>
+        <h2>HTML5 SVG Circle</h2>
+        <svg id="svgelem" xmlns="http://www.w3.org/2000/svg">
+            <circle id="redcircle" cx="50" cy="50" r="50" fill="red" /> </svg>
+    </div>
+    <div>
+        <h2>HTML5 SVG Rectangle</h2>
+        <svg id="svgelem" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect id="redrect" width="300" height="100" fill="red" /> </svg>
+
+    </div>
+    <div>
+        <h2>HTML5 SVG Line</h2>
+        <svg id="svgelem" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="0" x2="200" y2="100" style="stroke:red;stroke-width:2" /> </svg>
+    </div>
+    <div>
+        <h2>HTML5 SVG Ellipse</h2>
+        <svg id="svgelem" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="50" rx="100" ry="50" fill="red" /> </svg>
+    </div>
+    <div>
+        <h2>HTML5 SVG Polygon</h2>
+        <svg id="svgelem" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="20,10 300,20, 170,50" fill="red" /> </svg>
+    </div>
+    <div>
+        <h2>HTML5 SVG Polyline</h2>
+        <svg id="svgelem" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="0,0 0,20 20,20 20,40 40,40 40,60" fill="red" /> </svg>
+    </div>
+
+    <div>
+        <h2>HTML5 SVG Gradient Ellipse</h2>
+        <svg id="svgelem" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <radialGradient id="gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                    <stop offset="0%" style="stop-color:rgb(200,200,200); stop-opacity:0" />
+                    <stop offset="100%" style="stop-color:rgb(0,0,255); stop-opacity:1" /> </radialGradient>
+            </defs>
+            <ellipse cx="100" cy="50" rx="100" ry="50" style="fill:url(#gradient)" /> </svg>
+    </div>
+    <div>
+        <h2 align="center">HTML5 SVG Star</h2>
+
+        <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100,10 40,180 190,60 10,60 160,180" fill="red" />
+        </svg>
+    </div>
+</body>
+
+</html>
